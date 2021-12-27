@@ -1,6 +1,9 @@
+using ConductR.Handlers;
+using ConductR.Types;
+
 namespace ConductR.Samples;
 
-public record Ping(string Message);
+public record Ping(string Message) : IQuery;
 public record Pong(string Message);
 
 public class PingPongHandler : IQueryHandler<Ping, Pong>

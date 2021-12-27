@@ -1,6 +1,8 @@
+using ConductR.Handlers;
+using ConductR.Types;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ConductR;
+namespace ConductR.Dispatchers;
 
 public class StreamDispatcher : IStreamDispatcher
 {
@@ -11,9 +13,9 @@ public class StreamDispatcher : IStreamDispatcher
         this.serviceProvider = serviceProvider;
     }
 
-    public IAsyncEnumerable<TResult> DispatchAsync<TQuery, TResult>(TQuery query, CancellationToken token = default)
+    public IAsyncEnumerable<TResult> DispatchAsync<TStreamQuery, TResult>(TStreamQuery query, CancellationToken token = default) where TStreamQuery : IStreamQuery
     {
-        var handler = serviceProvider.GetRequiredService<IStreamHandler<TQuery, TResult>>();
+        var handler = serviceProvider.GetRequiredService<IStreamHandler<TStreamQuery, TResult>>();
         return handler.HandleAsync(query, token);
     }
 }

@@ -1,7 +1,10 @@
+using ConductR.Handlers;
+using ConductR.Types;
+
 namespace ConductR.Samples;
 
-public record ChangeSomething();
-public record SomethingChanged(DateTimeOffset Timestamp);
+public record ChangeSomething() : ICommand;
+public record SomethingChanged(DateTimeOffset Timestamp) : IEvent;
 
 public class ChangeHandler : ICommandHandler<ChangeSomething, DateTimeOffset>
 {

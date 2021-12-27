@@ -1,6 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ConductR.Handlers;
+using ConductR.Types;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace ConductR;
+namespace ConductR.Dispatchers;
+
 public class CommandDispatcher : ICommandDispatcher
 {
     private readonly IServiceProvider serviceProvider;
@@ -10,9 +13,9 @@ public class CommandDispatcher : ICommandDispatcher
         this.serviceProvider = serviceProvider;
     }
 
-    public ValueTask<TResult> DispatchAsync<TCommand, TResult>(TCommand query, CancellationToken token = default)
+    public ValueTask<TResult> DispatchAsync<TCommand, TResult>(TCommand command, CancellationToken token = default) where TCommand : ICommand
     {
         var handler = serviceProvider.GetRequiredService<ICommandHandler<TCommand, TResult>>();
-        return handler.HandleAsync(query, token);
+        return handler.HandleAsync(command, token);
     }
 }

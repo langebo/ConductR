@@ -1,5 +1,6 @@
+using ConductR.Dispatchers;
+using ConductR.Handlers;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace ConductR;
 
@@ -17,11 +18,12 @@ public static class ServiceCollectionExtensions
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
-        services.TryAddScoped<ICommandDispatcher, CommandDispatcher>();
-        services.TryAddScoped<IQueryDispatcher, QueryDispatcher>();
-        services.TryAddScoped<IStreamDispatcher, StreamDispatcher>();
-        services.TryAddScoped<IEventDispatcher, EventDispatcher>();
-        services.TryAddScoped<IConductor, Conductor>();
+        services.AddScoped<ICommandDispatcher, CommandDispatcher>();
+        services.AddScoped<IQueryDispatcher, QueryDispatcher>();
+        services.AddScoped<IStreamDispatcher, StreamDispatcher>();
+        services.AddScoped<IEventDispatcher, EventDispatcher>();
+
+        services.AddScoped<IConductor, Conductor>();
 
         return services;
     }

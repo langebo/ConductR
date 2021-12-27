@@ -1,8 +1,10 @@
 using System.Runtime.CompilerServices;
+using ConductR.Handlers;
+using ConductR.Types;
 
 namespace ConductR.Samples;
 
-public record Sing(int Syllables);
+public record Sing(int Syllables) : IStreamQuery;
 
 public class SingingHandler : IStreamHandler<Sing, string>
 {

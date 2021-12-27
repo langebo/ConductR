@@ -1,6 +1,8 @@
-namespace ConductR;
+using ConductR.Types;
 
-public interface IEventHandler<TEvent>
+namespace ConductR.Handlers;
+
+public interface IEventHandler<TEvent> where TEvent : IEvent
 {
     ValueTask HandleAsync(TEvent @event, CancellationToken token = default);
 }
