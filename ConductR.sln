@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{134C8A37-4551-4DAA-BA83-3E5AB24BDAE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR", "src\ConductR\ConductR.csproj", "{71C1D02D-1AD6-42C3-9864-7954B2E19265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR.Autofac", "src\ConductR.Autofac\ConductR.Autofac.csproj", "{46D1835B-B23E-4B7F-919B-A9CBE2AA8303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR.Microsoft", "src\ConductR.Microsoft\ConductR.Microsoft.csproj", "{32CEC3D4-0ECF-4432-B86A-531372E07AED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{D15D94E0-EEC8-4EE4-8AF8-5AAE351404D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR.Samples.Shared", "samples\ConductR.Samples.Shared\ConductR.Samples.Shared.csproj", "{8F3704D4-86E7-4AF2-AB35-8AD1D59A72AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR.Samples.Microsoft", "samples\ConductR.Samples.Microsoft\ConductR.Samples.Microsoft.csproj", "{A9C0CA53-945D-4036-BD6A-E274B1195D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR.Samples.Autofac", "samples\ConductR.Samples.Autofac\ConductR.Samples.Autofac.csproj", "{409C8474-394B-473E-B944-25F5EB379E8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{193BC673-AE2A-40C9-81B9-B68CF85E1433}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR.Tests", "tests\ConductR.Tests\ConductR.Tests.csproj", "{82C0504F-C554-41D5-B01A-2E98C27BDAB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR.Microsoft.Tests", "tests\ConductR.Microsoft.Tests\ConductR.Microsoft.Tests.csproj", "{5D111EE0-D0E3-41F2-A1C8-ADC247FE2BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConductR.Autofac.Tests", "tests\ConductR.Autofac.Tests\ConductR.Autofac.Tests.csproj", "{84EC18A2-0304-49AD-9A75-56F6637AC51E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71C1D02D-1AD6-42C3-9864-7954B2E19265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71C1D02D-1AD6-42C3-9864-7954B2E19265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71C1D02D-1AD6-42C3-9864-7954B2E19265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71C1D02D-1AD6-42C3-9864-7954B2E19265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D1835B-B23E-4B7F-919B-A9CBE2AA8303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D1835B-B23E-4B7F-919B-A9CBE2AA8303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D1835B-B23E-4B7F-919B-A9CBE2AA8303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D1835B-B23E-4B7F-919B-A9CBE2AA8303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32CEC3D4-0ECF-4432-B86A-531372E07AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32CEC3D4-0ECF-4432-B86A-531372E07AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32CEC3D4-0ECF-4432-B86A-531372E07AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32CEC3D4-0ECF-4432-B86A-531372E07AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F3704D4-86E7-4AF2-AB35-8AD1D59A72AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F3704D4-86E7-4AF2-AB35-8AD1D59A72AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F3704D4-86E7-4AF2-AB35-8AD1D59A72AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F3704D4-86E7-4AF2-AB35-8AD1D59A72AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C0CA53-945D-4036-BD6A-E274B1195D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C0CA53-945D-4036-BD6A-E274B1195D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C0CA53-945D-4036-BD6A-E274B1195D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C0CA53-945D-4036-BD6A-E274B1195D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409C8474-394B-473E-B944-25F5EB379E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409C8474-394B-473E-B944-25F5EB379E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409C8474-394B-473E-B944-25F5EB379E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409C8474-394B-473E-B944-25F5EB379E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C0504F-C554-41D5-B01A-2E98C27BDAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C0504F-C554-41D5-B01A-2E98C27BDAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C0504F-C554-41D5-B01A-2E98C27BDAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C0504F-C554-41D5-B01A-2E98C27BDAB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D111EE0-D0E3-41F2-A1C8-ADC247FE2BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D111EE0-D0E3-41F2-A1C8-ADC247FE2BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D111EE0-D0E3-41F2-A1C8-ADC247FE2BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D111EE0-D0E3-41F2-A1C8-ADC247FE2BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84EC18A2-0304-49AD-9A75-56F6637AC51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84EC18A2-0304-49AD-9A75-56F6637AC51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84EC18A2-0304-49AD-9A75-56F6637AC51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84EC18A2-0304-49AD-9A75-56F6637AC51E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71C1D02D-1AD6-42C3-9864-7954B2E19265} = {134C8A37-4551-4DAA-BA83-3E5AB24BDAE1}
+		{46D1835B-B23E-4B7F-919B-A9CBE2AA8303} = {134C8A37-4551-4DAA-BA83-3E5AB24BDAE1}
+		{32CEC3D4-0ECF-4432-B86A-531372E07AED} = {134C8A37-4551-4DAA-BA83-3E5AB24BDAE1}
+		{8F3704D4-86E7-4AF2-AB35-8AD1D59A72AE} = {D15D94E0-EEC8-4EE4-8AF8-5AAE351404D5}
+		{A9C0CA53-945D-4036-BD6A-E274B1195D5C} = {D15D94E0-EEC8-4EE4-8AF8-5AAE351404D5}
+		{409C8474-394B-473E-B944-25F5EB379E8C} = {D15D94E0-EEC8-4EE4-8AF8-5AAE351404D5}
+		{82C0504F-C554-41D5-B01A-2E98C27BDAB2} = {193BC673-AE2A-40C9-81B9-B68CF85E1433}
+		{5D111EE0-D0E3-41F2-A1C8-ADC247FE2BA2} = {193BC673-AE2A-40C9-81B9-B68CF85E1433}
+		{84EC18A2-0304-49AD-9A75-56F6637AC51E} = {193BC673-AE2A-40C9-81B9-B68CF85E1433}
+	EndGlobalSection
+EndGlobal
