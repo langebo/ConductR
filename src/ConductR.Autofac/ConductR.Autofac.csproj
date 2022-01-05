@@ -5,6 +5,11 @@
     <LangVersion>10</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>ConductR.Autofac</PackageId>
+    <Description>Autofac adapter for the ConductR package</Description>
+    <Authors>Boris Lange</Authors>
+    <Copyright>Copyright (c) 2022 Boris Lange</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

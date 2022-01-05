@@ -5,6 +5,11 @@
     <LangVersion>10</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>ConductR</PackageId>
+    <Description>An opinionated lightweight CQRS-ish mediator library.</Description>
+    <Authors>Boris Lange</Authors>
+    <Copyright>Copyright (c) 2022 Boris Lange</Copyright>
   </PropertyGroup>
 
 </Project>
