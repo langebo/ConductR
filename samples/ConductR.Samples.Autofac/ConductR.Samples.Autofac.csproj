@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ConductR.Autofac\ConductR.Autofac.csproj" />
     <ProjectReference Include="..\ConductR.Samples.Shared\ConductR.Samples.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ConductR.Autofac" Version="1.0.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
   </ItemGroup>
 

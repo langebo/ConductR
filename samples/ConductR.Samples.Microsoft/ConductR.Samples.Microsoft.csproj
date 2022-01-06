@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ConductR.Microsoft\ConductR.Microsoft.csproj" />
     <ProjectReference Include="..\ConductR.Samples.Shared\ConductR.Samples.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConductR.Microsoft" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

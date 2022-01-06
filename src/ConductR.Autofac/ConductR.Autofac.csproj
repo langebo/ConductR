@@ -10,14 +10,13 @@
     <Description>Autofac adapter for the ConductR package</Description>
     <Authors>Boris Lange</Authors>
     <Copyright>Copyright (c) 2022 Boris Lange</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/langebo/ConductR</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="6.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ConductR\ConductR.csproj" />
+    <PackageReference Include="ConductR" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

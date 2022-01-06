@@ -6,19 +6,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <PackageId>ConductR.Autofac</PackageId>
+    <PackageId>ConductR.Microsoft</PackageId>
     <Description>Microsoft.Extensions.DependencyInjection adapter for the ConductR package</Description>
     <Authors>Boris Lange</Authors>
     <Copyright>Copyright (c) 2022 Boris Lange</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/langebo/ConductR</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ConductR" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     <PackageReference Include="Scrutor" Version="3.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ConductR\ConductR.csproj" />
   </ItemGroup>
 
 </Project>
