@@ -14,6 +14,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Set version
         run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
       - name: Build ConductR
         run: dotnet build ./src/ConductR -c Release /p:Version=${VERSION}
       - name: Test ConductR
