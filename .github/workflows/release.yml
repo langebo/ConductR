@@ -1,0 +1,24 @@
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set version
+        run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
+      - name: Build ConductR
+        run: dotnet build ./src/ConductR -c Release /p:Version=${VERSION}
+      - name: Test ConductR
+        run: dotnet test ./tests/ConductR.Tests -c Release /p:Version=${VERSION}
+      - name: Pack ConductR
+        run: dotnet pack ./src/ConductR -c Release /p:Version=${VERSION} --no-build --output .
+      - name: Push ConductR
+        run: dotnet nuget push ConductR.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
+        env:
+          NUGET_APIKEY: ${{ secrets.NUGET_APIKEY }}

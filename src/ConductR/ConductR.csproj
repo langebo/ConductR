@@ -10,6 +10,8 @@
     <Description>An opinionated lightweight CQRS-ish mediator library.</Description>
     <Authors>Boris Lange</Authors>
     <Copyright>Copyright (c) 2022 Boris Lange</Copyright>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/langebo/ConductR</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
