@@ -20,11 +20,27 @@ jobs:
           dotnet-version: 6.0.x
       - name: Build ConductR
         run: dotnet build ./src/ConductR -c Release /p:Version=${VERSION}
+      - name: Build ConductR.Microsoft
+        run: dotnet build ./src/ConductR.Microsoft -c Release /p:Version=${VERSION}
+      - name: Build ConductR.Autofac
+        run: dotnet build ./src/ConductR.Autofac -c Release /p:Version=${VERSION}
       - name: Test ConductR
         run: dotnet test ./tests/ConductR.Tests -c Release /p:Version=${VERSION}
+      - name: Test ConductR.Microsoft
+        run: dotnet test ./tests/ConductR.Microsoft.Tests -c Release /p:Version=${VERSION}
+      - name: Test ConductR.Autofac
+        run: dotnet test ./tests/ConductR.Autofac.Tests -c Release /p:Version=${VERSION}
       - name: Pack ConductR
         run: dotnet pack ./src/ConductR -c Release /p:Version=${VERSION} --no-build --output .
+      - name: Pack ConductR.Microsoft
+        run: dotnet pack ./src/ConductR.Microsoft -c Release /p:Version=${VERSION} --no-build --output .
+      - name: Pack ConductR.Autofac
+        run: dotnet pack ./src/ConductR.Autofac -c Release /p:Version=${VERSION} --no-build --output .
       - name: Push ConductR
         run: dotnet nuget push ConductR.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
+      - name: Push ConductR.Microsoft
+        run: dotnet nuget push ConductR.Microsoft.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
+      - name: Push ConductR.Autofac
+        run: dotnet nuget push ConductR.Autofac.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_APIKEY}
         env:
           NUGET_APIKEY: ${{ secrets.NUGET_APIKEY }}
